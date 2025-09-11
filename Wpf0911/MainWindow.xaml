@@ -1,0 +1,19 @@
+﻿<Window x:Class="Wpf0911.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf0911"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button Content="OK!" HorizontalAlignment="Left" Margin="246,15,0,0" VerticalAlignment="Top" Height="17" Width="138"/>
+        <Label Margin="14,6,685,399" RenderTransformOrigin="0.08,0.082">
+            <Label x:Name="T0" Content="輸入一個正整數" Height="24" Width="152"/>
+        </Label>
+        <TextBox x:Name="T1" HorizontalAlignment="Left" Margin="111,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="T2" TextWrapping="Wrap" Text=" " Margin="23,55,83,59" Background="#FFFF0E0E"/>
+
+
+    </Grid>
+</Window>
