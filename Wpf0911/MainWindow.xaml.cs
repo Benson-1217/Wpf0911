@@ -22,19 +22,32 @@ namespace Wpf0911
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            
+
+        }
+
+        private void Button1_Click(object sender, RoutedEventArgs e)
+        {
             int n = Convert.ToInt32(T1.Text);
-            string result = " ";
-            for (int i = 1; i <=n;i++)
+            
+            if (int.TryParse(T1.Text,out n )||n<0)
             {
-                for(int j=1;j<=n;j++)
+                MessageBox.Show("請輸入正整數","輸入錯誤");
+                return;
+            }
+
+            T2.Clear();
+            string result = " ";
+            for (int i = 1; i <= n; i++)
+            {
+                for (int j = 1; j <= n; j++)
                 {
-                    result += $"{i}*{j}={i*j}".PadLeft(15);
+                    result += $"{i}*{j}={i * j}".PadLeft(15);
                 }
                 result += "\n";
 
             }
-           T2.Text = result;
-
+            T2.Text = result;
         }
     }
 }

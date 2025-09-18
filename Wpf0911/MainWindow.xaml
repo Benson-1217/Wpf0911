@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="OK!" HorizontalAlignment="Left" Margin="246,15,0,0" VerticalAlignment="Top" Height="17" Width="138"/>
+        <Button x:Name="Button1" Content="OK!" HorizontalAlignment="Left" Margin="246,15,0,0" VerticalAlignment="Top" Height="17" Width="138" Click="Button1_Click"/>
         <Label Margin="14,6,685,399" RenderTransformOrigin="0.08,0.082">
             <Label x:Name="T0" Content="輸入一個正整數" Height="24" Width="152"/>
         </Label>
