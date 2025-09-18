@@ -28,26 +28,39 @@ namespace Wpf0911
 
         private void Button1_Click(object sender, RoutedEventArgs e)
         {
-            int n = Convert.ToInt32(T1.Text);
-            
-            if (int.TryParse(T1.Text,out n )||n<0)
+            // int n = Convert.ToInt32(T1.Text);
+            int n;
+            List<int>prime = new List<int>();
+            if (!int.TryParse(T1.Text,out n )||n<=1)
             {
-                MessageBox.Show("請輸入正整數","輸入錯誤");
+                MessageBox.Show("請輸入大於2的整數","輸入錯誤");
                 return;
             }
-
             T2.Clear();
-            string result = " ";
-            for (int i = 1; i <= n; i++)
+            string OutputText = $"小於等於{n}的質數有 ";
+            for(int  i=2;i<=n;i++)
             {
-                for (int j = 1; j <= n; j++)
+                if (Iprime(i))
                 {
-                    result += $"{i}*{j}={i * j}".PadLeft(15);
+                    prime.Add(i);
                 }
-                result += "\n";
-
             }
-            T2.Text = result;
+            foreach (int p in prime)
+            {
+                OutputText += $"{p}  ";
+            }
+            T2.Text = OutputText;
+
+
+
+        }
+        private bool Iprime(int p)
+        {
+            for (int i = 2; i < p; i++)
+            {
+                if (p % i == 0) return false;
+            }
+            return true;
         }
     }
 }
